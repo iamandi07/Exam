@@ -31,7 +31,5 @@ public class CarService {
     public List<Car> getAll() {
         return carRepository.getAll();
     }
-    // public List<Agenda> getAmount() { return agendaRepository.getAmount();}
-
 
 }

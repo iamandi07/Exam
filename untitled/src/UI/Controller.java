@@ -33,7 +33,6 @@ public class Controller {
     public TableColumn tableColumnModel;
     public TableColumn tableColumnDistance;
     public TableColumn tableColumnPrice;
-    public TextField txtLongestDistance;
     public Label name;
 
     public CarService service;
@@ -78,26 +77,14 @@ public class Controller {
 
     }
 
-    public void btnCarLongestEventClick(ActionEvent actionEvent) {
-        String a = txtLongestDistance.getText();
 
-        int distance = Integer.MIN_VALUE;
-        List<Car> all = service.getAll();
-        for (Car i : all) {
-            int temp = Integer.parseInt(i.getDistance());
-            if (temp>distance && i.getDistance().equals(a)) {
-                distance=temp;
-            }
-        }
-        name.setText(distance+"");
-    }
 
     public TableView tableViewRental;
     public TableColumn tableColumnId1;
     public TableColumn tableColumnCarid;
     public TableColumn tableColumnDay;
-    public TableColumn getTableColumnDistance1;
-    public Label name2;
+    public TableColumn TableColumnDistance1;
+    public TextField txtLongestDay;
 
     public RentalService service1;
 
@@ -134,6 +121,19 @@ public class Controller {
             logger.log(Level.SEVERE, "Failed to create new Window: Rental.", e);
         }
 
+    }
+    public void btnRentalLongestEventClick(ActionEvent actionEvent) {
+        String a = txtLongestDay.getText();
+
+        int day = Integer.MIN_VALUE;
+        List<Rental> all = service1.getAll();
+        for (Rental i : all) {
+            int temp = Integer.parseInt(i.getDay());
+            if (temp>day && i.getDay().equals(a)) {
+                day=temp;
+            }
+        }
+        name.setText(day+"");
     }
 
 }

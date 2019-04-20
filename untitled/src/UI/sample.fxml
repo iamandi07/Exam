@@ -41,8 +41,8 @@
         </TableView>
         <Button fx:id="btnCarAdd" onAction="#btnCarAddClick" text="Add Car" />
         <HBox alignment="BOTTOM_RIGHT">
-            <TextField fx:id="txtLongestEvent" prefHeight="25.0" prefWidth="110.0" promptText="Date" />
-            <Button fx:id="btnLongestEvent" onAction="#btnCarLongestEventClick" text="Longest event " />
+            <TextField fx:id="txtLongestDay" prefHeight="25.0" prefWidth="110.0" promptText="Date" />
+            <Button fx:id="btnLongestDay" onAction="#btnRentalLongestEventClick" text="Longest day " />
             <Pane prefHeight="0.0" prefWidth="11.0" />
             <Label fx:id="name" prefHeight="26.0" prefWidth="100.0" />
         </HBox>
@@ -70,7 +70,7 @@
                 </TableColumn>
                 <TableColumn fx:id="tableColumnDistance1" text="Distance1">
                     <cellValueFactory>
-                        <PropertyValueFactory property="distance" />
+                        <PropertyValueFactory property="distance1" />
                     </cellValueFactory>
                 </TableColumn>
             </columns>
