@@ -52,6 +52,8 @@ public class Controller {
         Platform.runLater(() -> {
             cars.addAll(service.getAll());
             tableViewCar.setItems(cars);
+            rentals.addAll(service1.getAll());
+            tableViewRental.setItems(rentals);
         });
     }
 
@@ -90,16 +92,6 @@ public class Controller {
 
 
     private ObservableList<Rental> rentals = FXCollections.observableArrayList();
-
-
-    @FXML
-    private void initialize1() {
-
-        Platform.runLater(() -> {
-            rentals.addAll(service1.getAll());
-            tableViewRental.setItems(rentals);
-        });
-    }
 
 
     public void btnRentalAddClick(ActionEvent actionEvent) {
