@@ -18,10 +18,10 @@ public class RentalService {
      * @param id
      * @param carid
      * @param day
-     * @param distance
+     * @param distance1
      */
-    public void upsert(String id, String carid, String day, String distance) {
-        Rental rental = new Rental(id, carid, day, distance);
+    public void upsert(String id, String carid, String day, String distance1) {
+        Rental rental = new Rental(id, carid, day, distance1);
         rentalRepository.upsert(rental);
     }
 

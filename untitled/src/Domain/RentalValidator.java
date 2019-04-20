@@ -10,7 +10,7 @@ public class RentalValidator implements IValidator<Rental>{
      */
     public void validate(Rental rental) {
 
-        String number = rental.getDistance();
+        String number = rental.getDistance1();
         String errors = "";
         if (number == "0") {
             throw new CarValidatorException(errors);

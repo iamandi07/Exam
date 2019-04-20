@@ -16,7 +16,7 @@ class RentalServiceTest {
     @Test
     void testsIfInputIsCorrect() {
         service.upsert("1","scoala","11.11.2018","60");
-        assertEquals(32, service.getAll().get(0).getDistance());
+        assertEquals(32, service.getAll().get(0).getDistance1());
 
 
         try {

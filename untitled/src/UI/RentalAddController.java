@@ -25,8 +25,8 @@ public class RentalAddController {
             String id = String.valueOf(spnId.getValue());
             String carid = txtRentalCarid.getText();
             String day = txtRentalDay.getText();
-            String distance = txtRentalDistance1.getText();
-            service1.upsert(id, carid, day, distance);
+            String distance1 = txtRentalDistance1.getText();
+            service1.upsert(id, carid, day, distance1);
             btnCancelClick(actionEvent);
         } catch (RuntimeException rex) {
             Common.showValidationError(rex.getMessage());

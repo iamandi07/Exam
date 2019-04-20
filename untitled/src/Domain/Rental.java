@@ -4,14 +4,14 @@ public class Rental extends Entity {
     private String id;
     private String carid;
     private String day;
-    private String distance;
+    private String distance1;
 
-    public Rental(String id, String carid, String day, String distance) {
+    public Rental(String id, String carid, String day, String distance1) {
         super(id);
         this.id = id;
         this.carid = carid;
         this.day = day;
-        this.distance = distance;
+        this.distance1 = distance1;
     }
 
     public String getId() {
@@ -38,12 +38,12 @@ public class Rental extends Entity {
         this.day = day;
     }
 
-    public String getDistance() {
-        return distance;
+    public String getDistance1() {
+        return distance1;
     }
 
-    public void setDistance(String distance) {
-        this.distance = distance;
+    public void setDistance1(String distance) {
+        this.distance1 = distance;
     }
 
     @Override
@@ -52,7 +52,7 @@ public class Rental extends Entity {
                 "id='" + id + '\'' +
                 ", carid='" + carid + '\'' +
                 ", day='" + day + '\'' +
-                ", distance='" + distance + '\'' +
+                ", distance='" + distance1 + '\'' +
                 '}';
     }
 }
