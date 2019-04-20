@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<HBox alignment="center" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UI.Controller">
+
+    <VBox>
+        <Label text="Car:" />
+        <TableView fx:id="tableViewCar">
+            <columns>
+                <TableColumn fx:id="tableColumnId" text="id">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="id" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="tableColumnModel" text="Model">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="model" />
+                    </cellValueFactory>
+
+                </TableColumn>
+                <TableColumn fx:id="tableColumnDistance" text="Distance">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="distance" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="tableColumnPrice" text="Price">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="price" />
+                    </cellValueFactory>
+                </TableColumn>
+            </columns>
+        </TableView>
+        <Button fx:id="btnCarAdd" onAction="#btnCarAddClick" text="Add Car" />
+        <HBox alignment="BOTTOM_RIGHT">
+            <TextField fx:id="txtLongestEvent" prefHeight="25.0" prefWidth="110.0" promptText="Date" />
+            <Button fx:id="btnLongestEvent" onAction="#btnCarLongestEventClick" text="Longest event " />
+            <Pane prefHeight="0.0" prefWidth="11.0" />
+            <Label fx:id="name" prefHeight="26.0" prefWidth="100.0" />
+        </HBox>
+    </VBox>
+
+    <VBox>
+        <Label text="Rental:" />
+        <TableView fx:id="tableViewRental">
+            <columns>
+                <TableColumn fx:id="tableColumnId1" text="id">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="id" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="tableColumnCarid" text="Carid">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="carid" />
+                    </cellValueFactory>
+
+                </TableColumn>
+                <TableColumn fx:id="tableColumnDay" text="Day">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="day" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="tableColumnDistance1" text="Distance1">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="distance" />
+                    </cellValueFactory>
+                </TableColumn>
+            </columns>
+        </TableView>
+        <Button fx:id="btnRentalAdd" onAction="#btnRentalAddClick" text="Add a rental" />
+        <HBox alignment="BOTTOM_RIGHT">
+            <Pane prefHeight="0.0" prefWidth="11.0" />
+            <Label fx:id="name1" prefHeight="26.0" prefWidth="100.0" />
+        </HBox>
+    </VBox>
+
+</HBox>
