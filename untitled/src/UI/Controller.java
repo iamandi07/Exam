@@ -83,7 +83,7 @@ public class Controller {
     public TableColumn tableColumnId1;
     public TableColumn tableColumnCarid;
     public TableColumn tableColumnDay;
-    public TableColumn TableColumnDistance1;
+    public TableColumn tableColumnDistance1;
     public TextField txtLongestDay;
 
     public RentalService service1;
